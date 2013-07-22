@@ -1,0 +1,1 @@
+A web app that does user registration, logout, login, course purchasing through Stripe and signed URL creation using boto.
