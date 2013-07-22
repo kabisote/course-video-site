@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block body %}
+<article>
+    <header><h1>Create Account</h1></header>
+    <form action="" method="post">
+        {% module xsrf_form_html() %}
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" value="{{ email }}">
+        <span>{{ error_email }}</span>
+        <label for="password1">Password</label>
+        <input type="password" name="password1" id="password1">
+        <span>{{ error_password1 }}</span>
+        <label for="password2">Verify Password</label>
+        <input type="password" name="password2" id="password2">
+        <span>{{ error_password2 }}</span>
+        <br>
+        <input type="hidden" name="referer" id="referer" value="{{ referer }}">
+        <button type="submit" class="btn">Sign Up</button> or <a href="/login">Log In</a>
+    </form>
+</article>
+{% end %}

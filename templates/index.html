@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block body %}
+<article>
+    <header><h1>My Courses</h1></header>
+    <table class="course-list">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Days Purchased</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for course in courses %}
+            <tr>
+                <td><a href="/video/{{ course.id }}">{{ course.post_title }}</a></td>
+                <td>{{ course.days }}</td>
+                <td>Information coming soon.</td>
+            </tr>
+        {% end %}
+        </tbody>
+    </table>
+</article>
+{% end %}

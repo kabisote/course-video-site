@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block body %}
+<article>
+    <header><h1>Videos in CDN</h1></header>
+    <ul>
+    {% for video in videos %}
+        <li>{{ video }}</li>
+    {% end %}
+    </ul>
+</article>
+{% end %}
+
